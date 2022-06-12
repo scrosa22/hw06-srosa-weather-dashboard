@@ -10,15 +10,20 @@ button.addEventListener('click',function(){
   fetch('https://api.openweathermap.org/data/2.5/weather?q=' +searchValue.value+ '&appid=c7343955075d6f22937e16261c3e17d9')
 //   searchvalue {city name},{state code},{country code}
     .then(response => response.json())
-    .then(data => {
-        var nameValue = data['name']
-        var tempValue = data['main']['temp']
-        var descValue = data['weather']['0']['desciption']
+    .then(data => console.log(data)
+        
+    //     {
+    //     var nameValue = data['name']
+    //     var tempValue = data['main']['temp']
+    //     var descValue = data['weather']['0']['description']
 
-        cityName.innerHTML = nameValue
-        temp.innerHTML = tempValue
-        desc.innerHTML = descValue
-    })
+    //     cityName.innerHTML = nameValue
+    //     temp.innerHTML = tempValue
+    //     desc.innerHTML = descValue
+    // }
+    
+    
+    )
 
     
 
