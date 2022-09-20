@@ -27,15 +27,18 @@
       <h1>Weather Dashboard</h1>
     </header>
 
-    <aside>
+    <aside class="container vstack">
       <h2>Search for a City:</h2>
-      <div class="searchInput">
+      <div class="searchInput container">
         <input
           type="text"
           class="searchValue"
           placeholder="Enter a City here!"
         />
         <input type="submit" class="button" value="Submit" />
+      </div>
+      <div id="searchHistory">
+        previous search
       </div>
     </aside>
 
@@ -54,7 +57,10 @@
         </div>
 
       </div>
+      <div class="row">
+        <p>5 day forecast</p>
 
+      </div>
     </div>
   </body>
   <footer>
