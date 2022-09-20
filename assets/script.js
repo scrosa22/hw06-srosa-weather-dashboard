@@ -10,7 +10,6 @@ var aPIKey = "5043541d08d2d01a2a0ae76e4ef8627d";
 
 // https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
-// https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&appid=
 
 button.addEventListener("click", searchWeather);
 
