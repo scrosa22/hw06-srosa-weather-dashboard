@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    
+
     <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
     />
     <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link
@@ -24,47 +24,66 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <header>
+    <header class="container">
       <h1>Weather Dashboard</h1>
     </header>
 
-    <aside class="container ">
-      <h2>Search for a City:</h2>
-      <div class="searchInput container">
-        <input
-          type="text"
-          class="searchValue"
-          placeholder="Enter a City here!"
-        />
-        <input type="submit" class="button" value="Submit" />
+    <div class="d-inline-flex">
+
+      <div class="container d-inline-block">
+        <aside class="container d-lg-inline-block">
+          <h2>Search for a City:</h2>
+          <div class="searchInput container d-inline">
+            <input
+              type="text"
+              class="searchValue"
+              placeholder="Enter a City here!"
+            />
+            <input type="submit" class="button" value="Submit" />
+          </div>
+          <div
+            class="d-flex flex-column d-inline-block col-lg-2"
+            id="searchHistory"
+          >
+            previous search
+          </div>
+        </aside>
       </div>
-      <div id="searchHistory">
-        previous search
-      </div>
-    </aside>
 
-    <!-- display container -->
-    <div class="col-md-9"> 
-      <div class="row">
+      <div class="container d-inline-flex">
+        <!-- display container -->
+        <div class="">
+          <div class="row">
+            <div class="currentWeather container border">
+              <h1 id="cityName">City name</h1>
+              
+              <img id="icon"></img>
+              <p id="currentDesc">Search Desc</p>
+              <p id="currentTemp">Search Temp</p>
+              <p id="currentWind">Search Wind</p>
+              <p id="currentHum">Search Humidity</p>
+              <p id="currentUV">UV Index</p>
+            </div>
+          </div>
+
+          <div class="row container border d-inline-block">
+            <p>5 day forecast</p>
+            <div class="border" id="weekly1"></div>
+            <div class="border" id="weekly2"></div>
+            <div class="border" id="weekly3"></div>
+            <div class="border" id="weekly4"></div>
+            <div class="border" id="weekly5"></div>
 
 
-        <div class="currentWeather container border">
-          <h1 id="cityName">City name</h1>
-          <!-- date & icon -->
-          <p id="currentDesc">Search Desc</p>
-          <p id="currentTemp">Search Temp</p>
-          <p id="currentWind">Search Wind</p>
-          <p id="currentHum">Search Humidity</p>
-          <p id="currentUV">UV Index</p>
+          </div>
         </div>
-
       </div>
-      <div class="row  container border">
-        <p>5 day forecast</p>
-        <div id="weekly"></div>
 
-      </div>
     </div>
+
+
+
+
   </body>
   <footer>
     <script src="./assets/script.js"></script>
