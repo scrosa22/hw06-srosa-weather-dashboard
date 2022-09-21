@@ -75,7 +75,12 @@ const weekView = (lat, lon) => {
   }).then((datab) => {
     console.log(datab);
     for (x = 0; x < 5; x++) {
-      weeklytemp.textContent = datab.list[1].main.temp;
+      
+      weeklytemp.innerHTML += datab.list[x].weather[0].description;
+      weeklytemp.innerHTML += "Temp  " + datab.list[x].main.temp;
+      weeklytemp.innerHTML += "Humidity   " + datab.list[x].main.humidity;
+      weeklytemp.innerHTML += datab.list[x].wind.speed;
+      
     }
   });
 };
