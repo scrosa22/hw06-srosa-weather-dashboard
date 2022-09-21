@@ -77,7 +77,7 @@ const weekView = (lat, lon) => {
     method: "get",
   }).then((datab) => {
     console.log(datab);
-    for (x=0;x<5;x++)
+    for (x=0; x<5; x++)
     {
       weeklytemp.textContent = (datab.list[0])
     }
